@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARD-inspired Poetry Generator</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: 'Courier New', monospace; /* Retro typewriter look */
+            max-width: 800px; /* Limit content width for readability */
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Main container for app */
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Input row for adding elements */
+        .element-input {
+            display: grid;
+            grid-template-columns: 1fr auto auto; /* Input takes most space */
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* List of all elements (words/phrases) */
+        .element-list {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f8f8;
+            border-radius: 4px;
+        }
+
+        /* Single element row inside list */
+        .element-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Section for controls like "generate" button and settings */
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        /* Basic button styling */
+        button {
+            padding: 0.5rem 1rem;
+            background: #2a6b96;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #1c4966;
+        }
+
+        /* Inputs and dropdowns */
+        input, select {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* The output area where the poem appears */
+        .poem-output {
+            white-space: pre-wrap; /* Preserve line breaks */
+            font-family: 'Courier New', monospace;
+            padding: 2rem;
+            background: #f8f8f8;
+            border-radius: 4px;
+            margin-top: 1rem;
+            min-height: 200px; /* Reserve space before poem is generated */
+        }
+
+        /* Small tag to show word type (noun, verb, etc.) */
+        .property-tag {
+            background: #e0e0e0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* Error message styling */
+        .error {
+            color: #d32f2f;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BARD-inspired Poetry Generator</h1>
+        
+        <!-- Input form for adding new elements -->
+        <div class="element-input">
+            <input type="text" id="elementText" placeholder="Enter element text">
+            <select id="elementType">
+                <option value="noun">Noun</option>
+                <option value="verb">Verb</option>
+                <option value="adjective">Adjective</option>
+                <option value="phrase">Phrase</option>
+            </select>
+            <button onclick="addElement()">Add Element</button>
+        </div>
+
+        <!-- List of all current elements -->
+        <div class="element-list" id="elementList"></div>
+
+        <!-- Controls for generating the poem -->
+        <div class="controls">
+            <button onclick="generatePoem()">Generate Poem</button>
+            <input type="number" id="maxLines" value="10" min="1" max="50" placeholder="Max lines">
+            <input type="number" id="repetitionFactor" value="0.7" min="0" max="1" step="0.1" placeholder="Repetition factor">
+        </div>
+
+        <!-- Where the generated poem will be displayed -->
+        <div class="poem-output" id="poemOutput"></div>
+    </div>
+
+    <script>
+        /* Holds all elements the generator can use */
+        let elements = [];
+
+        /* Default set of elements, themed on Dune */
+        const defaultElements = [
+            { text: "the spice flows", type: "phrase", probability: 1.0 },
+            { text: "desert", type: "noun", probability: 1.0 },
+            { text: "Arrakis", type: "noun", probability: 1.0 },
+            { text: "whispers", type: "verb", probability: 1.0 },
+            { text: "sand", type: "noun", probability: 1.0 },
+            { text: "melange", type: "noun", probability: 1.0 },
+            { text: "winds", type: "noun", probability: 1.0 },
+            { text: "burning", type: "adjective", probability: 1.0 },
+            { text: "sacred", type: "adjective", probability: 1.0 },
+            { text: "time flows like sand", type: "phrase", probability: 1.0 },
+        ];
+
+        // Start with the default set of elements
+        elements = [...defaultElements];
+        updateElementList();
+
+        /**
+         * Add a new element from the input form
+         */
+        function addElement() {
+            const text = document.getElementById('elementText').value.trim();
+            const type = document.getElementById('elementType').value;
+            
+            if (!text) return; // Do nothing if input is empty
+
+            // Add new element with default probability
+            elements.push({
+                text,
+                type,
+                probability: 1.0
+            });
+
+            // Clear the input box after adding
+            document.getElementById('elementText').value = '';
+            updateElementList();
+        }
+
+        /**
+         * Remove an element at a given index
+         */
+        function removeElement(index) {
+            elements.splice(index, 1);
+            updateElementList();
+        }
+
+        /**
+         * Refresh the element list shown on the page
+         */
+        function updateElementList() {
+            const list = document.getElementById('elementList');
+            
+            // Build HTML for each element
+            list.innerHTML = elements.map((element, index) => `
+                <div class="element-item">
+                    <span>
+                        <span class="property-tag">${element.type}</span>
+                        ${element.text}
+                    </span>
+                    <button onclick="removeElement(${index})">Remove</button>
+                </div>
+            `).join('');
+        }
+
+        /**
+         * Randomly pick an element from a list,
+         * weighted by each element's probability value
+         */
+        function getRandomElement(elements) {
+            const totalProbability = elements.reduce((sum, el) => sum + el.probability, 0);
+            let random = Math.random() * totalProbability;
+            
+            for (let element of elements) {
+                random -= element.probability;
+                if (random <= 0) return element;
+            }
+            
+            // Fallback if loop fails (shouldn’t happen)
+            return elements[0];
+        }
+
+        /**
+         * Generate a poem using current elements
+         */
+        function generatePoem() {
+            const maxLines = parseInt(document.getElementById('maxLines').value);
+            const repetitionFactor = parseFloat(document.getElementById('repetitionFactor').value);
+            const output = document.getElementById('poemOutput');
+            
+            // If no elements exist, show error
+            if (elements.length === 0) {
+                output.innerHTML = '<span class="error">Please add some elements first.</span>';
+                return;
+            }
+
+            // Make a working copy of elements so probabilities can change
+            let workingElements = elements.map(el => ({...el}));
+            let poem = '';
+            let lastType = null; // Tracks last element type used
+            
+            for (let i = 0; i < maxLines; i++) {
+                // Avoid using the same type twice in a row
+                let availableElements = workingElements.filter(el => el.type !== lastType);
+                
+                if (availableElements.length === 0) {
+                    availableElements = workingElements; // Fallback if no options
+                }
+
+                // Pick an element
+                const element = getRandomElement(availableElements);
+                
+                // Add element text as a line in the poem
+                poem += element.text + '\n';
+                
+                // Reduce probability of this element to limit repetition
+                workingElements = workingElements.map(el => {
+                    if (el.text === element.text) {
+                        return {...el, probability: el.probability * repetitionFactor};
+                    }
+                    return el;
+                });
+
+                // Remember the type for next iteration
+                lastType = element.type;
+            }
+
+            // Display the finished poem
+            output.textContent = poem;
+        }
+    </script>
+</body>
+</html>
