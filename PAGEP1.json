@@ -1,0 +1,257 @@
+[
+    {
+        "filename": "page-01.pdf",
+        "title": "Computer Arts Society Bulletin April 1963",
+        "date": "1963-04",
+        "summary": "Bulletin announcing events including a conference on Computers in Design, a symposium on Computer Graphics, and an international exhibition in Zagreb. Includes information on EVENT ONE, membership, and publications.",
+        "people": [
+            "Robin Shirley",
+            "Spike Hawkins",
+            "Dorothy Lansdown",
+            "R.O. Parslow"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-01.pdf"
+    },
+    {
+        "filename": "page-02.pdf",
+        "title": "Computer Arts Society Bulletin June 1963",
+        "date": "1963-06",
+        "summary": "Bulletin covering public meetings such as 'How to Write a Computer Dance' and exhibitions like INNC 70. Highlights include membership details, a non-numerical programming workshop, and calls for art contest submissions.",
+        "people": [
+            "Alan Sutcliffe",
+            "John Lansdown",
+            "Gustav Metzger"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-02.pdf"
+    },
+    {
+        "filename": "page-03.pdf",
+        "title": "Computer Arts Society Bulletin August 1963",
+        "date": "1963-08",
+        "summary": "This bulletin discusses public meetings, DataFair 69, and critiques on computer art in exhibitions like 'SOFTWARE' at the Jewish Museum. Includes membership details, publications, and a call for submissions to upcoming exhibitions.",
+        "people": [
+            "Lambert Meertens",
+            "Jonathan Benthall"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-03.pdf"
+    },
+    {
+        "filename": "page-04.pdf",
+        "title": "Computer Arts Society Bulletin September 1963",
+        "date": "1963-09",
+        "summary": "Includes announcements of society meetings, review of MUSIC V, and updates on Datafair 69. Details collaboration initiatives and mentions developments in electronic music.",
+        "people": [
+            "Stroud Cornock",
+            "George Mallen",
+            "Alan Sutcliffe"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-04.pdf"
+    },
+    {
+        "filename": "page-05.pdf",
+        "title": "Computer Arts Society Bulletin November 1969",
+        "date": "1969-11",
+        "summary": "The bulletin details society objectives, membership benefits, upcoming exhibitions like 'On the Eve of Tomorrow' in Hannover, and contributions from members. Includes A. Michael Noll's writings on computer art.",
+        "people": [
+            "Alan Sutcliffe",
+            "John Lansdown",
+            "Gustav Metzger",
+            "A. Michael Noll"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-05.pdf"
+    },
+    {
+        "filename": "page-06.pdf",
+        "title": "Computer Arts Society Bulletin February 1970",
+        "date": "1970-02",
+        "summary": "Focus on computer music and notable composers such as David Lewin, Jim Tenney, and Jean-Claude Risset. Also covers international exhibitions and activities in the UK and abroad.",
+        "people": [
+            "David Lewin",
+            "Jim Tenney",
+            "Jim Randall",
+            "John Chowning",
+            "Jean-Claude Risset"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-06.pdf"
+    },
+    {
+        "filename": "page-07.pdf",
+        "title": "Computer Arts Society Bulletin March 1970",
+        "date": "1970-03",
+        "summary": "Discusses ART1 program and design techniques, along with international exhibitions and artist opportunities. Reflects on future developments in computer art.",
+        "people": [
+            "Manuel Barbadillo"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-07.pdf"
+    },
+    {
+        "filename": "page-08.pdf",
+        "title": "Computer Arts Society Bulletin May 1970",
+        "date": "1970-05",
+        "summary": "Announcements of meetings, traveling exhibitions, and programming courses. Discusses international computer art activities and contributions to Computer Graphics 70.",
+        "people": [
+            "Alan Sutcliffe",
+            "John Lansdown",
+            "Gustav Metzger"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-08.pdf"
+    },
+    {
+        "filename": "page-09.pdf",
+        "title": "Computer Arts Society Bulletin July 1970",
+        "date": "1970-07",
+        "summary": "Highlights include computer-designed stamps, the Blue Cube project, and updates from CASH (Computer Arts Society Holland). Includes reports from international computer art activities.",
+        "people": [
+            "R.D.E. Oxenaar",
+            "Maarten Binnendijk",
+            "Peter Struycken"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-09.pdf"
+    },
+    {
+        "filename": "page-10.pdf",
+        "title": "Computer Arts Society Bulletin September 1970",
+        "date": "1970-09",
+        "summary": "Details society activities, upcoming exhibitions, and contributions to the field. Includes updates from international groups and reports on computer art education initiatives.",
+        "people": [
+            "Stroud Cornock",
+            "George Mallen"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-10.pdf"
+    },
+    {
+        "filename": "page-11.pdf",
+        "title": "Computer Arts Society Bulletin November 1970",
+        "date": "1970-11",
+        "summary": "Announces new collaborations, exhibitions, and the publication of articles on computer aesthetics. Includes updates on software developments and international computer art news.",
+        "people": [
+            "Alan Sutcliffe",
+            "John Lansdown",
+            "Frieder Nake"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-11.pdf"
+    },
+    {
+        "filename": "page-12.pdf",
+        "title": "Computer Arts Society Bulletin January 1971",
+        "date": "1971-01",
+        "summary": "Focuses on computer graphics research, exhibitions in the UK and USA, and educational initiatives for artists exploring algorithmic processes.",
+        "people": [
+            "Harold Cohen",
+            "Edward Ihnatowicz"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-12.pdf"
+    },
+    {
+        "filename": "page-13.pdf",
+        "title": "Computer Arts Society Bulletin March 1971",
+        "date": "1971-03",
+        "summary": "Highlights conferences on computer art, including papers on generative aesthetics and digital sound. Mentions international collaborations and new publications.",
+        "people": [
+            "Stroud Cornock",
+            "George Mallen",
+            "Vera Molnar"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-13.pdf"
+    },
+    {
+        "filename": "page-14.pdf",
+        "title": "Computer Arts Society Bulletin May 1971",
+        "date": "1971-05",
+        "summary": "Reports on member exhibitions, algorithmic design projects, and educational workshops for computer-aided art. Notes the increasing interest in digital image processing.",
+        "people": [
+            "Alan Sutcliffe",
+            "Manuel Barbadillo"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-14.pdf"
+    },
+    {
+        "filename": "page-15.pdf",
+        "title": "Computer Arts Society Bulletin July 1971",
+        "date": "1971-07",
+        "summary": "Discusses advancements in computer animation and its application in art. Includes reviews of recent exhibitions and announcements for upcoming events.",
+        "people": [
+            "John Whitney",
+            "Georg Nees"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-15.pdf"
+    },
+    {
+        "filename": "page-16.pdf",
+        "title": "Computer Arts Society Bulletin September 1971",
+        "date": "1971-09",
+        "summary": "Explores algorithmic sculpture and digital sound synthesis. Highlights international partnerships and contributions from leading figures in computer arts.",
+        "people": [
+            "Frieder Nake",
+            "Vera Molnar"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-16.pdf"
+    },
+    {
+        "filename": "page-17.pdf",
+        "title": "Computer Arts Society Bulletin November 1971",
+        "date": "1971-11",
+        "summary": "Covers developments in interactive installations and generative systems. Features articles on cybernetic art and computer-assisted choreography.",
+        "people": [
+            "Edward Ihnatowicz",
+            "Alan Sutcliffe",
+            "Stroud Cornock"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-17.pdf"
+    },
+    {
+        "filename": "page-18.pdf",
+        "title": "Computer Arts Society Bulletin January 1972",
+        "date": "1972-01",
+        "summary": "Highlights recent publications on computer aesthetics and theoretical frameworks for algorithmic art. Notes conferences and society initiatives.",
+        "people": [
+            "George Mallen",
+            "Harold Cohen"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-18.pdf"
+    },
+    {
+        "filename": "page-19.pdf",
+        "title": "Computer Arts Society Bulletin March 1972",
+        "date": "1972-03",
+        "summary": "Reports on collaborations between artists and technologists. Includes updates on software tools for creative work and educational workshops.",
+        "people": [
+            "Manuel Barbadillo",
+            "Vera Molnar"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-19.pdf"
+    },
+    {
+        "filename": "page-20.pdf",
+        "title": "Computer Arts Society Bulletin May 1972",
+        "date": "1972-05",
+        "summary": "Covers algorithmic drawing systems and interactive installations. Highlights international exhibitions and member contributions to journals.",
+        "people": [
+            "John Whitney",
+            "Alan Sutcliffe"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-20.pdf"
+    },
+    {
+        "filename": "page-21.pdf",
+        "title": "Computer Arts Society Bulletin July 1972",
+        "date": "1972-07",
+        "summary": "Details new techniques in digital printmaking and discusses the integration of computer technologies in traditional art forms. Includes reviews of major exhibitions.",
+        "people": [
+            "Georg Nees",
+            "Frieder Nake"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-21.pdf"
+    },
+    {
+        "filename": "page-22.pdf",
+        "title": "Computer Arts Society Bulletin September 1972",
+        "date": "1972-09",
+        "summary": "Announces upcoming conferences and calls for papers on computer aesthetics. Discusses cybernetic art projects and international collaborations.",
+        "people": [
+            "Alan Sutcliffe",
+            "Edward Ihnatowicz"
+        ],
+        "url": "https://github.com/seanzshow1/CAAData/blob/00248a9b925c48a5adf50159be5d3f8a85d4932b/page-22.pdf"
+    }
+]
